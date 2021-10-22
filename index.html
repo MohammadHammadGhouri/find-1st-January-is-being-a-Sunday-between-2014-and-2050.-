@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Find 1st January is being a Sunday of the following years</h1>
+    <form action="" style="margin: 0 auto; display: table;">
+        <input type="number" id="from" placeholder="From" style="float: left; margin-right: 10px;">
+        <span style="font-size: 15px; ">:</span>
+        <input type="number" id="to" placeholder="T0" style="margin-left: 10px;">
+        <h3 id="result" ></h3>
+      <button type="button" onclick="check();" style="display: block; margin:  0 auto; width: 100%; padding: 5px;">Check</button>
+    </form>
+    <script>
+        function check(){   
+            
+            let from= document.getElementById("from").value;
+            let to=document.getElementById("to").value;
+            for(from;from<to;from++){
+            
+            let mydate=new Date(from,0,1);
+            let myday=mydate.getDay();
+            if(myday===0){
+                console.log("Fist_January_is being sunday");
+                console.log(from);
+            }
+            else {
+                console.log("Fist_January_is not being sunday")
+                console.log(from)
+            }
+        }
+        
+        }
+
+    </script>
+</body>
+</html>
